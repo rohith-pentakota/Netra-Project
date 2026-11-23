@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--Defines character encoding and mobile responsiveness-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--Browser title-->
+        <title>NETRA ROBOT MONITORING SYSTEMS</title>
+        <! -- Connects to the external CSS file -- >
+        <link rel="stylesheet" href="style.css">
+    </head> 
+    <body>
+        <header class="topbar">
+            <div class="brand">
+                <div class="brand-logo">N
+
+                </div>
+                <div>
+                    <h1>NETRA</h1>
+                    <p>ROBOT MISSION CONTROL</p>
+                </div>
+            </div>
+            <nav>
+                <a href="#dashboard">Dashboard</a>
+                <a href="#fleet">Fleet</a>
+                <a href="#telemetry">Telemetry</a>
+                <a href="#alerts">Alerts</a>
+            </nav>
+            <div class="header-right">
+                <span class="online-dot"></span>
+                <span>SYSTEM ONLINE</span>
+                <strong id="clock">--:</strong>
+                
+            </div>
+            <button  id="dispatch-open" type="button" >+ Dispatch Mission</button>
+        </header>
+        <main class="page">
+            <section class="kpi-grid">
+                <article class="kpi-card">
+                    <span>ROVER ONLINE</span>
+                    <h2 id="online-count">6/6</h2>
+                    <p>Active rover units</p>
+                </article>
+
+                <article class="kpi-card">
+                    <span>AVERAGE BATTERY</span>
+                    <h2 id="average-battery">76%</h2>
+                    <p>Fleet battery level</p>
+                </article>
+                <article class="kpi-card">
+                    <span>OPEN ALERTS</span>
+                    <h2 id="alert-count">0</h2>
+                    <p>Require attention</p>
+                </article>
+                <article class="kpi-card">
+                    <span>DISTANCE TOTAL</span>
+                    <h2 id="distance">13.2km</h2>
+                    <p>Travel distance</p>
+                </article>
+            </section>
+            <select id="dashboard" class="section-heading">
+                <div>
+                    <h2>Fleet Overview</h2>
+                    <p>Monitor all campus rover activities</p>
+                </div>
+                <span class="live-tag">. LIVE MONITORING</span> 
+            </select>
+            <section class="Panel" id="fleet">
+                <div class="panel-header">
+                    <h3>Fleet Status</h3>
+                    <p>Real-time status of all rover units</p>
+                    </div>
+                    <div class="Panel-Title">
+                        <div>
+                            <h2>Fleet management</h2>
+                            <p>campus rover information</p>
+                        </div>
+                        <input type="search" id="Rover search" placeholder="Search Rover or Zone">
+                    </div>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Rover Id</th>
+                                    <th>Zone</th>
+                                    <th>Status</th>
+                                    <th>Battery</th>
+                                    <th>Temperature</th>
+                                    <th>Sonar Distance</th>
+                                    <th>Speed</th>
+                                </tr>
+                            </thead>
+                            <tbody id="fleet-body"></tbody>
+                        </table>
+                    </div>
+                    <p class="table-note" >Select a Rover to view its sensor readings Telemetry history </p>
+            </section>
+        </main>
+        <script src="script.js"></script>
+
+    </body>
+
+</html>
